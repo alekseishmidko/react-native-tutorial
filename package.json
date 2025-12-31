@@ -4,9 +4,15 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
+    "start-tunnel": "expo start --tunnel",
+    "start-cache": "expo start -c",
+    "start-tunnel-cache": "expo start --tunnel -c",
+    "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test": "jest --watchAll",
+    "lint": "expo lint"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -18,6 +24,8 @@
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~10.0.0",
     "typescript": "~5.9.2"
   },
   "private": true
